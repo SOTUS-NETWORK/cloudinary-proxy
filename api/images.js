@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 
     const urls = data.resources.map(r =>
       cloudinary.url(r.public_id, {
-        type: "authenticated",
+        type: "upload",
         sign_url: true,
         secure: true
       })
